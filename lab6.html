@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Webpage with Media Queries</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Container with two columns */
+  .container {
+    display: flex;
+    padding: 20px;
+  }
+
+  .left-column, .right-column {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .left-column {
+    flex: 2;
+    background-color: #f4a261;
+  }
+
+  .right-column {
+    flex: 1;
+    background-color: #2a9d8f;
+    color: white;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Media Query for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack columns vertically */
+    }
+
+    .left-column, .right-column {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Responsive Webpage</h1>
+</header>
+
+<div class="container">
+  <div class="left-column">
+    <h2>Main Content</h2>
+    <p>This is the main content area. On larger screens, it appears as the left column.</p>
+  </div>
+  <div class="right-column">
+    <h2>Sidebar</h2>
+    <p>This is the sidebar. On smaller screens, it stacks below the main content.</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Responsive Webpage</p>
+</footer>
+
+</body>
+</html>
